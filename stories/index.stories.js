@@ -5,6 +5,8 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { withState } from '@dump247/storybook-state';
 
+import 'bootstrap/scss/bootstrap.scss';
+
 //add fontawesome icons for testing
 import fontawesome from '@fortawesome/fontawesome';
 import faRocket from '@fortawesome/fontawesome-free-solid/faRocket';

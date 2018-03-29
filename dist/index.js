@@ -1,5 +1,4 @@
 'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.ZeroPad = exports.TabView = exports.SLLogo = exports.SLLoadingIcon = exports.LoadingButton = exports.DropDownMenu = exports.DateFormat = exports.ConfirmButton = exports.ChipButton = exports.CardValue = exports.ButtonBar = exports.BoolDropDownMenuItem = undefined;
-require('bootstrap/scss/bootstrap.scss');
 var _fontawesome = require('@fortawesome/fontawesome');var _fontawesome2 = _interopRequireDefault(_fontawesome);
 var _faTimes = require('@fortawesome/fontawesome-free-solid/faTimes');var _faTimes2 = _interopRequireDefault(_faTimes);
 var _faPlus = require('@fortawesome/fontawesome-free-solid/faPlus');var _faPlus2 = _interopRequireDefault(_faPlus);
@@ -17,8 +16,8 @@ var _LoadingButton = require('./LoadingButton');var _LoadingButton2 = _interopRe
 var _SLLoadingIcon = require('./SLLoadingIcon');var _SLLoadingIcon2 = _interopRequireDefault(_SLLoadingIcon);
 var _SLLogo = require('./SLLogo');var _SLLogo2 = _interopRequireDefault(_SLLogo);
 var _TabView = require('./TabView');var _TabView2 = _interopRequireDefault(_TabView);
-var _ZeroPad = require('./ZeroPad');var _ZeroPad2 = _interopRequireDefault(_ZeroPad);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}_fontawesome2.default.library.add(_faTimes2.default, _faPlus2.default, _faBars2.default); //hopefully this works?
-exports.
+var _ZeroPad = require('./ZeroPad');var _ZeroPad2 = _interopRequireDefault(_ZeroPad);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //hopefully this works?
+_fontawesome2.default.library.add(_faTimes2.default, _faPlus2.default, _faBars2.default);exports.
 
 BoolDropDownMenuItem = _BoolDropDownMenuItem2.default;exports.
 ButtonBar = _ButtonBar2.default;exports.
