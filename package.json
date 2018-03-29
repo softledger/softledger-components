@@ -7,10 +7,10 @@
   "main": "./dist/index.js",
   "scripts": {
     "clean-dist": "rm -rf ./dist",
-    "build": "yarn run clean-dist && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist && cp ./src/styles.scss ./dist",
+    "build": "yarn run clean-dist && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist && cp ./src/styles.scss ./dist && yarn docs",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "docs": "rdr ./src/ --readmeFile ./README.md"
+    "docs": "node ./buildMarkdown.js"
   },
   "peerDependencies": {
     "bootstrap": "^4.0.0",
