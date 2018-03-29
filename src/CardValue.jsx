@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Card, CardHeader, CardBody } from 'reactstrap';
 
 const CardValue = ({big, Header, Body, style}) =>  {
-	const getStyle = big ? {} : {padding: ".25rem"};
+	const getStyle = () => big ? {} : {padding: ".25rem"};
 
 	const renderHeader = Header => {
 		if(Header) {
