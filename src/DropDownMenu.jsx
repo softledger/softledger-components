@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 import { Dropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
-
+/**
+ * Thin wrapper on reactstrap DropdownMenu
+ * Toggle tag defaults to a font aweseom bars
+ * Controls toggle state
+ */
 export default class DropDownMenu extends React.Component {
 	constructor(props) {
     super(props);
@@ -43,7 +47,21 @@ export default class DropDownMenu extends React.Component {
 }
 
 DropDownMenu.propTypes = {
+	/**
+	 * Custom Tag
+	 */
 	toggleTag: PropTypes.object,
+	/**
+	 * className to apply to DropDown container
+	 */
 	className: PropTypes.string,
+	/**
+	 * Should open on the right
+	 */
 	openRight: PropTypes.bool
+}
+
+DropDownMenu.defaultProps = {
+	toggleTag: <FontAwesomeIcon icon='bars' />,
+	openRight: false
 }

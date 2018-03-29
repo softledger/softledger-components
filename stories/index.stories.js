@@ -10,16 +10,16 @@ import 'bootstrap/scss/bootstrap.scss';
 
 //add fontawesome icons for testing
 import fontawesome from '@fortawesome/fontawesome';
-import faRocket from '@fortawesome/fontawesome-free-solid/faRocket';
-fontawesome.library.add(faTimes, faPlus, faBars);
+import faRocket from '@fortawesome/fontawesome-free-solid';
+fontawesome.library.add(faRocket);
 
 //Story components
 import { 
 	BoolDropDownMenuItem, ButtonBar, CardValue, ChipButton, ConfirmButton, DateFormat, DropDownMenu, LoadingButton, SLLoadingIcon, SLLogo, TabView, ZeroPad
-} from '../dist';
+} from '../src';
 
 //import styles
-import '../dist/styles/css';
+import '../src/styles.scss';
 
 //promise function
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -116,9 +116,6 @@ storiesOf('ConfirmButton', module)
 storiesOf('DateFormat', module)
 	.add('Default Format', () => (
 		<DateFormat date={new Date()} />
-	))
-	.add('Missing Date', () => (
-		<DateFormat />
 	))
 	.add('Custom format', () => (
 		<DateFormat date={new Date} format={'MM/DD/YY'} />

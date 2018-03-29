@@ -3,8 +3,13 @@ var _react = require('react');var _react2 = _interopRequireDefault(_react);
 var _propTypes = require('prop-types');var _propTypes2 = _interopRequireDefault(_propTypes);
 var _rcTooltip = require('rc-tooltip');var _rcTooltip2 = _interopRequireDefault(_rcTooltip);
 require('rc-tooltip/assets/bootstrap.css');
-var _reactFontawesome = require('@fortawesome/react-fontawesome');var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+var _reactFontawesome = require('@fortawesome/react-fontawesome');var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}
 
+/**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * Multi-purpose button 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * shows loading icon if onSubmit is promise based
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * controls loading state
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */var
 LoadingButton = function (_React$Component) {_inherits(LoadingButton, _React$Component);
 	function LoadingButton(props) {_classCallCheck(this, LoadingButton);var _this = _possibleConstructorReturn(this, (LoadingButton.__proto__ || Object.getPrototypeOf(LoadingButton)).call(this,
 		props));_this.
@@ -79,11 +84,45 @@ LoadingButton = function (_React$Component) {_inherits(LoadingButton, _React$Com
 
 
 LoadingButton.propTypes = {
+	/**
+                             * Callback for when the button is clicked
+                             * *if it does not return a promise, set prop 'notPromise'={true}
+                             */
 	onClick: _propTypes2.default.func.isRequired,
+	/**
+                                                * Font Awesome icon name to be used
+                                                * *if set buttonText is ignored
+                                                */
 	iconClass: _propTypes2.default.string,
+	/**
+                                         * Optional classNames to apply to the button
+                                         */
 	buttonClass: _propTypes2.default.string,
+	/**
+                                           * Set to true to disable the button
+                                           */
 	disabled: _propTypes2.default.bool,
+	/**
+                                      * Text to display on the button
+                                      * **required** if iconClass is not set
+                                      */
 	buttonText: _propTypes2.default.string,
+	/**
+                                          * Text to display as a tooltip when the button is hovered
+                                          */
 	toolTip: _propTypes2.default.string,
-	toolTipPlacement: _propTypes2.default.string,
+	/**
+                                       * Location the tooltip should appear
+                                       */
+	toolTipPlacement: _propTypes2.default.oneOf(['left', 'right', 'top', 'bottom', 'topLeft', 'topRight', 'bottomLeft', 'bottomRight']),
+	/**
+                                                                                                                                       * Specifies that the onClick function does not return a Promise
+                                                                                                                                       */
 	notPromise: _propTypes2.default.bool };
+
+
+LoadingButton.defaultProps = {
+	buttonClass: 'btn-primary',
+	disabled: false,
+	toolTipPlacement: 'top',
+	notPromise: false };

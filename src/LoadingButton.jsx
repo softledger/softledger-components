@@ -5,6 +5,11 @@ import Tooltip from 'rc-tooltip';
 import 'rc-tooltip/assets/bootstrap.css';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
+/**
+ * Multi-purpose button 
+ * shows loading icon if onSubmit is promise based
+ * controls loading state
+ */
 export default class LoadingButton extends React.Component {
 	constructor(props) {
 		super(props);
@@ -79,12 +84,46 @@ export default class LoadingButton extends React.Component {
 }
 
 LoadingButton.propTypes = {
+	/**
+	 * Callback for when the button is clicked
+	 * *if it does not return a promise, set prop 'notPromise'={true}
+	 */
 	onClick: PropTypes.func.isRequired,
+	/**
+	 * Font Awesome icon name to be used
+	 * *if set buttonText is ignored
+	 */
 	iconClass: PropTypes.string,
+	/**
+	 * Optional classNames to apply to the button
+	 */
 	buttonClass: PropTypes.string,
+	/**
+	 * Set to true to disable the button
+	 */
 	disabled: PropTypes.bool,
+	/**
+	 * Text to display on the button
+	 * **required** if iconClass is not set
+	 */
 	buttonText: PropTypes.string,
+	/**
+	 * Text to display as a tooltip when the button is hovered
+	 */
 	toolTip: PropTypes.string,
-	toolTipPlacement: PropTypes.string,
+	/**
+	 * Location the tooltip should appear
+	 */
+	toolTipPlacement: PropTypes.oneOf(['left','right','top','bottom', 'topLeft', 'topRight', 'bottomLeft', 'bottomRight']),
+	/**
+	 * Specifies that the onClick function does not return a Promise
+	 */
 	notPromise: PropTypes.bool
+}
+
+LoadingButton.defaultProps = {
+	buttonClass: 'btn-primary',
+	disabled: false,
+	toolTipPlacement: 'top',
+	notPromise: false
 }

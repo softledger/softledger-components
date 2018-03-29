@@ -1,6 +1,9 @@
 'use strict';
 import React from 'react';
 
+/**
+ * SVG generated SoftLedger Logo
+ */
 const SLLogo = () =>(
   <svg width="24px" 
     height="33px" 

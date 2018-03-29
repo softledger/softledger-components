@@ -6,6 +6,9 @@ import {
 } from 'reactstrap';
 import {SLLoadingIcon} from './';
 
+/**
+ * Button which, when clicked, displays a confirm modal
+ */
 class ConfirmButton extends React.Component {
 	constructor(props) {
 		super(props);
@@ -93,13 +96,49 @@ class ConfirmButton extends React.Component {
 }
 
 ConfirmButton.propTypes = {
+	/**
+	 * Callback when modal is confirmed
+	 */
 	onConfirm: PropTypes.func.isRequired,
-	confirmBody: PropTypes.any,
-	confirmTitle: PropTypes.any,
-	//optional
+	/**
+	 * Text or JSX to show in modal body
+	 */
+	confirmBody: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.object
+	]),
+	/**
+	 * Text or JSX to show in modal header
+	 */
+	confirmTitle: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.object
+	]),
+	/**
+	 * Classes to apply to button "space separated"
+	 * example: 'btn-success'
+	 */
 	buttonClass: PropTypes.string,
+	/**
+	 * Whether the button is disabled
+	 */
 	disabled: PropTypes.bool,
-	buttonText: PropTypes.string
+	/**
+	 * Text to display on the button
+	 */
+	buttonText: PropTypes.string,
+	/**
+	 * Additional styles to apply to the button
+	 */
+	style: PropTypes.object
+}
+
+ConfirmButton.defaultProps = {
+	confirmTitle: 'Are you sure?',
+	confirmBody: 'Please Confirm',
+	buttonClass: 'btn-primary',
+	disabled: false,
+	buttonText: 'Submit'
 }
 
 export default ConfirmButton;

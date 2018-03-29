@@ -4,8 +4,11 @@ var _propTypes = require('prop-types');var _propTypes2 = _interopRequireDefault(
 var _reactstrap = require('reactstrap');
 
 
-var _ = require('./');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+var _ = require('./');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}
 
+/**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             * Button which, when clicked, displays a confirm modal
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             */var
 ConfirmButton = function (_React$Component) {_inherits(ConfirmButton, _React$Component);
 	function ConfirmButton(props) {_classCallCheck(this, ConfirmButton);var _this = _possibleConstructorReturn(this, (ConfirmButton.__proto__ || Object.getPrototypeOf(ConfirmButton)).call(this,
 		props));_this.
@@ -93,13 +96,49 @@ ConfirmButton = function (_React$Component) {_inherits(ConfirmButton, _React$Com
 
 
 ConfirmButton.propTypes = {
+	/**
+                             * Callback when modal is confirmed
+                             */
 	onConfirm: _propTypes2.default.func.isRequired,
-	confirmBody: _propTypes2.default.any,
-	confirmTitle: _propTypes2.default.any,
-	//optional
+	/**
+                                                  * Text or JSX to show in modal body
+                                                  */
+	confirmBody: _propTypes2.default.oneOfType([
+	_propTypes2.default.string,
+	_propTypes2.default.object]),
+
+	/**
+                                * Text or JSX to show in modal header
+                                */
+	confirmTitle: _propTypes2.default.oneOfType([
+	_propTypes2.default.string,
+	_propTypes2.default.object]),
+
+	/**
+                                * Classes to apply to button "space separated"
+                                * example: 'btn-success'
+                                */
 	buttonClass: _propTypes2.default.string,
+	/**
+                                           * Whether the button is disabled
+                                           */
 	disabled: _propTypes2.default.bool,
-	buttonText: _propTypes2.default.string };exports.default =
+	/**
+                                      * Text to display on the button
+                                      */
+	buttonText: _propTypes2.default.string,
+	/**
+                                          * Additional styles to apply to the button
+                                          */
+	style: _propTypes2.default.object };
+
+
+ConfirmButton.defaultProps = {
+	confirmTitle: 'Are you sure?',
+	confirmBody: 'Please Confirm',
+	buttonClass: 'btn-primary',
+	disabled: false,
+	buttonText: 'Submit' };exports.default =
 
 
 ConfirmButton;

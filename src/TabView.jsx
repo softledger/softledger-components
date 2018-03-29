@@ -7,6 +7,9 @@ import {
 } from 'reactstrap';
 import classnames from 'classnames';
 
+/**
+ * Thin wrapper on reactstrap's Tabs
+ */
 export default class TabView extends React.Component {
 	constructor(props) {
 		super(props);
@@ -62,9 +65,22 @@ export default class TabView extends React.Component {
 }
 
 TabView.propTypes = {
+	/**
+	 * Array of tabs to display
+	 */
 	tabs: PropTypes.arrayOf(PropTypes.shape({
+		/**
+		 * Tab Navigation Header Text
+		 */
 		Header: PropTypes.string.isRequired,
+		/**
+		 * JSX to display as the tab content
+		 */
 		Body: PropTypes.object.isRequired,
+		/**
+		 * Optional callback when the tab is clicked
+		 * useful for loading content
+		 */
 		onClick: PropTypes.func
 	})).isRequired
 }

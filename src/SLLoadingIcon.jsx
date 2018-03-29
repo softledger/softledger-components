@@ -1,6 +1,9 @@
 'use strict';
 import React from 'react';
 
+/**
+ * Loading Icon which displays the SoftLedger Log spinning
+ */
 const SLLoadingIcon = () => {
 	const style = {
     mixBlendMode: 'multiply'
