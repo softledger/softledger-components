@@ -1,6 +1,6 @@
 {
   "name": "@softledger/components",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Geoff Ostrega <geoff.ostrega@softledger.com>",
   "license": "MIT",
   "description": "SoftLedger UI Components",
@@ -12,11 +12,11 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
+    "bootstrap": "^4.0.0",
+    "moment": "^2.20.1",
     "prop-types": "~15.6.0",
     "react": "~16.2.0",
-    "reactstrap": "~5.0.0",
-    "bootstrap": "^4.0.0",
-    "moment": "^2.20.1"
+    "reactstrap": "~5.0.0"
   },
   "devDependencies": {
     "@dump247/storybook-state": "^1.3.0",
