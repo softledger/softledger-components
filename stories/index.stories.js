@@ -7,6 +7,7 @@ import { withState } from '@dump247/storybook-state';
 
 import 'bootstrap/scss/bootstrap.scss';
 
+
 //add fontawesome icons for testing
 import fontawesome from '@fortawesome/fontawesome';
 import faRocket from '@fortawesome/fontawesome-free-solid/faRocket';
@@ -15,7 +16,10 @@ fontawesome.library.add(faTimes, faPlus, faBars);
 //Story components
 import { 
 	BoolDropDownMenuItem, ButtonBar, CardValue, ChipButton, ConfirmButton, DateFormat, DropDownMenu, LoadingButton, SLLoadingIcon, SLLogo, TabView, ZeroPad
-} from '../src';
+} from '../dist';
+
+//import styles
+import '../dist/styles/css';
 
 //promise function
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
