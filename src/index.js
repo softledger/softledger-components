@@ -1,5 +1,10 @@
 //hopefully this works?
 import 'bootstrap/scss/bootstrap.scss';
+import fontawesome from '@fortawesome/fontawesome';
+import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
+import faPlus from '@fortawesome/fontawesome-free-solid/faPlus';
+import faBars from '@fortawesome/fontawesome-free-solid/faBars';
+fontawesome.library.add(faTimes, faPlus, faBars);
 
 import BoolDropDownMenuItem from './BoolDropDownMenuItem';
 import ButtonBar from './ButtonBar';

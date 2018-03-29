@@ -8,10 +8,7 @@ import { withState } from '@dump247/storybook-state';
 //add fontawesome icons for testing
 import fontawesome from '@fortawesome/fontawesome';
 import faRocket from '@fortawesome/fontawesome-free-solid/faRocket';
-import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
-import faPlus from '@fortawesome/fontawesome-free-solid/faPlus';
-import faBars from '@fortawesome/fontawesome-free-solid/faBars';
-fontawesome.library.add(faRocket, faTimes, faPlus, faBars);
+fontawesome.library.add(faTimes, faPlus, faBars);
 
 //Story components
 import { 
