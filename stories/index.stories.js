@@ -18,9 +18,6 @@ import {
 	BoolDropDownMenuItem, ButtonBar, CardValue, ChipButton, ConfirmButton, DateFormat, DropDownMenu, LoadingButton, SLLoadingIcon, SLLogo, TabView, ZeroPad
 } from '../src';
 
-//import styles
-import '../src/styles.scss';
-
 //promise function
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 

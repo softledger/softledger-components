@@ -1,3 +1,6 @@
+import 'rc-tooltip/assets/bootstrap.css';
+import './styles.scss';
+
 //hopefully this works?
 import fontawesome from '@fortawesome/fontawesome';
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
