@@ -1,6 +1,6 @@
 {
   "name": "@softledger/components",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "author": "Geoff Ostrega <geoff.ostrega@softledger.com>",
   "license": "MIT",
   "description": "SoftLedger UI Components",
@@ -12,7 +12,7 @@
     "build-storybook": "build-storybook",
     "docs": "node ./buildMarkdown.js",
     "deploy-storybook": "storybook-to-ghpages",
-    "test": "yarn run build && mocha --require babel-core/register -r ./mocha.conf test/*.test.js", 
+    "test": "yarn run build && mocha --require babel-core/register -r ./mocha.conf test/*.test.js",
     "_test": "mocha --require babel-core/register -r ./mocha.conf test/*.test.js"
   },
   "peerDependencies": {
