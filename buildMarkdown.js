@@ -8,11 +8,12 @@ const renderer = new ReactDocGenMarkdownRenderer({
 });
 
 //output path
-const readmeFile = path.join(__dirname, 'README.md');
+const readmeFile = path.join(__dirname, 'readme.md');
 
 //empty file
 fs.writeFileSync(readmeFile, '');
 
+fs.appendFileSync(readmeFile, fs.readFileSync(path.join(__dirname, 'readme.template.md')))
 
 //loop through all files in path
 fs.readdirSync(componentPath).forEach(file => {

@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/gostrega/.nvm/versions/node/v8.9.4/bin/node /Users/gostrega/.nvm/versions/node/v8.9.4/bin/yarn _test
+  /Users/gostrega/.nvm/versions/node/v8.9.4/bin/node /Users/gostrega/.nvm/versions/node/v8.9.4/bin/yarn deploy-storybook
 
 PATH: 
   /Users/gostrega/.nvm/versions/node/v8.9.4/bin:/Users/gostrega/Library/Python/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -29,7 +29,7 @@ npm manifest:
       "docs": "node ./buildMarkdown.js",
       "deploy-storybook": "storybook-to-ghpages",
       "test": "yarn run build && mocha --require babel-core/register -r ./mocha.conf test/*.test.js", 
-      "_test": "mocha --require babel-core/register -r ./mocha.conf test/TabView.test.js"
+      "_test": "mocha --require babel-core/register -r ./mocha.conf test/*.test.js"
     },
     "peerDependencies": {
       "prop-types": "~15.6.0",
@@ -7792,7 +7792,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c mocha --require babel-core/register -r ./mocha.conf test/TabView.test.js
+  Arguments: -c storybook-to-ghpages
   Directory: /Users/gostrega/BitBucket/softledger-components
   Output:
   
