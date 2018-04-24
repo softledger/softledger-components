@@ -54,7 +54,7 @@ DropDownMenu.propTypes = {
 	/**
 	 * className to apply to DropDown container
 	 */
-	className: PropTypes.string,
+	class: PropTypes.string,
 	/**
 	 * Should open on the right
 	 */

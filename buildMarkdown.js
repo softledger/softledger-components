@@ -18,7 +18,7 @@ fs.writeFileSync(readmeFile, '');
 fs.readdirSync(componentPath).forEach(file => {
   //only do jsx files
   if(file.indexOf('.jsx') === -1) return;
-  console.log("file", file);
+  //console.log("file", file);
   const content = fs.readFileSync(path.join(componentPath, file));
   //read each file
   const doc = reactDocgen.parse(content);

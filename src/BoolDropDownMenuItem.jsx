@@ -8,8 +8,11 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
  * Drop Down Menu Item which is toggled as either on/off on click
  * Component is stateless, so toggle is handled up
  */
-const BoolDropDownMenuItem = ({text, value, onToggle}) => (
-	<DropdownItem onClick={() => onToggle(text)}>
+const BoolDropDownMenuItem = ({text, value, onToggle, toggle}) => (
+	<DropdownItem 
+		onClick={() => onToggle(text)}
+		toggle={false}
+	>
 		<FontAwesomeIcon icon={value ? "times" : "plus"} />
     <span style={{paddingLeft:"5px",paddingRight:"5px"}}>&#124;</span>
     {text}
@@ -28,7 +31,11 @@ BoolDropDownMenuItem.propTypes = {
 	/**
 	 * Function to toggles the value
 	 */
-	onToggle: PropTypes.func.isRequired
+	onToggle: PropTypes.func.isRequired,
+	/**
+	 * If false, will not toggle wrapped dropdown
+	 */
+	toggle: PropTypes.bool
 };
 
 export default BoolDropDownMenuItem;

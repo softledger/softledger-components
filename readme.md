@@ -10,6 +10,7 @@ prop | type | default | required | description
 ---- | :----: | :-------: | :--------: | -----------
 **onToggle** | `Function` |  | :white_check_mark: | Function to toggles the value
 **text** | `String` |  | :white_check_mark: | Menu Item Text
+**toggle** | `Boolean` |  | :x: | If false, will not toggle wrapped dropdown
 **value** | `Boolean` |  | :x: | Current value
 
 
@@ -104,7 +105,7 @@ Controls toggle state
 
 prop | type | default | required | description
 ---- | :----: | :-------: | :--------: | -----------
-**className** | `String` |  | :x: | className to apply to DropDown container
+**class** | `String` |  | :x: | className to apply to DropDown container
 **openRight** | `Boolean` | `false` | :x: | Should open on the right
 **toggleTag** | `Object` | `<FontAwesomeIcon icon='bars' />` | :x: | Custom Tag
 

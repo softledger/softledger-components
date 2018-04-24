@@ -54,10 +54,10 @@ DropDownMenu.propTypes = {
 	/**
                                          * className to apply to DropDown container
                                          */
-	className: _propTypes2.default.string,
+	class: _propTypes2.default.string,
 	/**
-                                         * Should open on the right
-                                         */
+                                     * Should open on the right
+                                     */
 	openRight: _propTypes2.default.bool };
 
 

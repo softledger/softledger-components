@@ -8,8 +8,11 @@ var _reactFontawesome = require('@fortawesome/react-fontawesome');var _reactFont
                                                                                                                                                                                                                                     * Drop Down Menu Item which is toggled as either on/off on click
                                                                                                                                                                                                                                     * Component is stateless, so toggle is handled up
                                                                                                                                                                                                                                     */
-var BoolDropDownMenuItem = function BoolDropDownMenuItem(_ref) {var text = _ref.text,value = _ref.value,onToggle = _ref.onToggle;return (
-		_react2.default.createElement(_reactstrap.DropdownItem, { onClick: function onClick() {return onToggle(text);} },
+var BoolDropDownMenuItem = function BoolDropDownMenuItem(_ref) {var text = _ref.text,value = _ref.value,onToggle = _ref.onToggle,toggle = _ref.toggle;return (
+		_react2.default.createElement(_reactstrap.DropdownItem, {
+				onClick: function onClick() {return onToggle(text);},
+				toggle: false },
+
 			_react2.default.createElement(_reactFontawesome2.default, { icon: value ? "times" : "plus" }),
 			_react2.default.createElement('span', { style: { paddingLeft: "5px", paddingRight: "5px" } }, '|'),
 			text));};
@@ -28,7 +31,11 @@ BoolDropDownMenuItem.propTypes = {
 	/**
                                                * Function to toggles the value
                                                */
-	onToggle: _propTypes2.default.func.isRequired };exports.default =
+	onToggle: _propTypes2.default.func.isRequired,
+	/**
+                                                 * If false, will not toggle wrapped dropdown
+                                                 */
+	toggle: _propTypes2.default.bool };exports.default =
 
 
 BoolDropDownMenuItem;
