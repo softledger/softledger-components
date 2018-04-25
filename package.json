@@ -40,7 +40,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "ignore-styles": "^5.0.1",
-    "insert-react-docgen-markdown": "^0.1.0",
+    "insert-react-docgen-markdown": "^0.1.1",
     "jsdom": "^11.8.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.1.1",
