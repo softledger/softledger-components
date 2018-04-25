@@ -10,7 +10,7 @@
     "build": "yarn run clean-dist && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist && cp ./src/styles.scss ./dist && yarn docs",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "docs": "node ./buildMarkdown.js",
+    "docs": "node node_modules/insert-react-docgen-markdown/index.js -b ./ -s ./src/",
     "deploy-storybook": "storybook-to-ghpages",
     "test": "yarn run build && mocha --require babel-core/register -r ./mocha.conf test/*.test.js",
     "_test": "mocha --require babel-core/register -r ./mocha.conf test/*.test.js"
@@ -40,6 +40,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "ignore-styles": "^5.0.1",
+    "insert-react-docgen-markdown": "^0.1.0",
     "jsdom": "^11.8.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.1.1",

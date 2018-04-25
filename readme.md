@@ -18,7 +18,6 @@ import { LoadingButton } from '@softledger/components';
 
 ## Components:
 
-
 ## BoolDropDownMenuItem
 
 From [`src/BoolDropDownMenuItem.jsx`](src/BoolDropDownMenuItem.jsx)
